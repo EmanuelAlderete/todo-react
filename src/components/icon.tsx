@@ -3,18 +3,18 @@ import type React from "react";
 import { iconVariants } from "./iconVariants";
 
 interface IconProps
-	extends React.ComponentProps<"svg">,
-		VariantProps<typeof iconVariants> {
-	svg: React.FC<React.ComponentProps<"svg">>;
+  extends React.ComponentProps<"svg">,
+    VariantProps<typeof iconVariants> {
+  svg: React.FC<React.ComponentProps<"svg">>;
 }
 
 export default function Icon({
-	svg: SvgComponent,
-	animate,
-	className,
-	...props
+  svg: SvgComponent,
+  animate,
+  className,
+  ...props
 }: IconProps) {
-	return (
-		<SvgComponent className={iconVariants({ animate, className })} {...props} />
-	);
+  return (
+    <SvgComponent className={iconVariants({ animate, className })} {...props} />
+  );
 }

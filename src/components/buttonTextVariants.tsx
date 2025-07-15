@@ -1,10 +1,9 @@
 import { cva } from "class-variance-authority";
 
-export const badgeTextVariants = cva("", {
+export const buttonTextVariants = cva("", {
   variants: {
     variant: {
-      primary: "text-green-dark",
-      secondary: "text-pink-dark",
+      primary: "text-gray-400",
     },
   },
   defaultVariants: {

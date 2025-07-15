@@ -3,21 +3,21 @@ import React from "react";
 import { textVariants } from "./text-variants";
 
 interface TextProps extends VariantProps<typeof textVariants> {
-	as?: keyof React.JSX.IntrinsicElements;
-	className?: string;
-	children?: React.ReactNode;
+  as?: keyof React.JSX.IntrinsicElements;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 export default function Text({
-	variant,
-	as = "span",
-	className,
-	children,
-	...props
+  variant,
+  as = "span",
+  className,
+  children,
+  ...props
 }: TextProps) {
-	return React.createElement(as, {
-		className: textVariants({ variant, className }),
-		...props,
-		children,
-	});
+  return React.createElement(as, {
+    className: textVariants({ variant, className }),
+    ...props,
+    children,
+  });
 }
