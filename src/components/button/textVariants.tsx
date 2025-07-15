@@ -1,16 +1,12 @@
 import { cva } from "class-variance-authority";
 
-export const buttonIconVariants = cva("transition", {
+export const textVariants = cva("", {
   variants: {
     variant: {
-      primary: "fill-pink-base",
-    },
-    size: {
-      md: "w-5 h-5",
+      primary: "text-gray-400",
     },
   },
   defaultVariants: {
     variant: "primary",
-    size: "md",
   },
 });

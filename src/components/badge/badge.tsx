@@ -1,8 +1,8 @@
 import type { VariantProps } from "class-variance-authority";
 import type React from "react";
-import { badgeTextVariants } from "./badgeTextVariants";
+import Text from "../text";
 import { badgeVariants } from "./badgeVariants";
-import Text from "./text";
+import { textVariants } from "./textVariants";
 
 interface BadgeProps
   extends React.ComponentProps<"div">,
@@ -17,7 +17,7 @@ export default function Badge({
 }: BadgeProps) {
   return (
     <div className={badgeVariants({ variant, size, className })} {...props}>
-      <Text variant="body-sm-bold" className={badgeTextVariants({ variant })}>
+      <Text variant="body-sm-bold" className={textVariants({ variant })}>
         {children}
       </Text>
     </div>

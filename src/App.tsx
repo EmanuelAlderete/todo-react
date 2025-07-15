@@ -2,9 +2,10 @@ import PlusIcon from "./assets/icons/plus.svg?react";
 import Spinner from "./assets/icons/spinner.svg?react";
 import TrashIcon from "./assets/icons/trash.svg?react";
 import Badge from "./components/badge";
-import Button from "./components/button";
+import Button from "./components/button/button";
+import ButtonIcon from "./components/buttonIcon";
 import Icon from "./components/icon";
-import Text from "./components/text";
+import Text from "./components/text/text";
 
 export default function App() {
   return (
@@ -31,6 +32,11 @@ export default function App() {
 
       <div>
         <Button icon={PlusIcon}>Be welcome</Button>
+      </div>
+
+      <div className="flex gap-1">
+        <ButtonIcon icon={TrashIcon} variant={"secondary"} />
+        <ButtonIcon icon={TrashIcon} variant={"primary"} />
       </div>
     </div>
   );

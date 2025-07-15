@@ -1,10 +1,10 @@
 import type { VariantProps } from "class-variance-authority";
 import type React from "react";
-import { buttonIconVariants } from "./buttonIconVariants";
-import { buttonTextVariants } from "./buttonTextVariants";
+import Icon from "../icon/icon";
+import Text from "../text/text";
 import { buttonVariants } from "./buttonVariants";
-import Icon from "./icon";
-import Text from "./text";
+import { iconVariants } from "./iconVariants";
+import { textVariants } from "./textVariants";
 
 interface ButtonProps
   extends Omit<React.ComponentProps<"button">, "size" | "disabled">,
@@ -27,12 +27,9 @@ export default function Button({
       {...props}
     >
       {IconComponent && (
-        <Icon
-          svg={IconComponent}
-          className={buttonIconVariants({ variant, size })}
-        />
+        <Icon svg={IconComponent} className={iconVariants({ variant, size })} />
       )}
-      <Text variant="body-md-bold" className={buttonTextVariants({ variant })}>
+      <Text variant="body-md-bold" className={textVariants({ variant })}>
         {children}
       </Text>
     </button>
