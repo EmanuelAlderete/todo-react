@@ -53,6 +53,7 @@ export default function App() {
 
         <div className="gap-10">
           <InputCheckbox />
+          <InputCheckbox loading />
         </div>
 
         <div className="gap-10">
