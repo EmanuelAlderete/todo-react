@@ -5,6 +5,7 @@ export const badgeVariants = cva(
   {
     variants: {
       variant: {
+        none: "",
         primary: "bg-green-light",
         secondary: "bg-pink-light",
       },

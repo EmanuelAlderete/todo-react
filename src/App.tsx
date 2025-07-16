@@ -31,9 +31,10 @@ export default function App() {
           <Icon svg={Spinner} className="fill-pink-base" animate />
         </div>
 
-        <div>
+        <div className="flex gap-1">
           <Badge variant="secondary">5</Badge>
           <Badge variant="primary">2 de 5</Badge>
+          <Badge loading>6</Badge>
         </div>
 
         <div>
