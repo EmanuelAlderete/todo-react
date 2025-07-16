@@ -4,6 +4,7 @@ import TrashIcon from "./assets/icons/trash.svg?react";
 import Badge from "./components/badge";
 import Button from "./components/button";
 import ButtonIcon from "./components/buttonIcon";
+import Card from "./components/card";
 import Icon from "./components/icon";
 import InputCheckbox from "./components/inputCheckbox";
 import InputText from "./components/inputText";
@@ -47,6 +48,10 @@ export default function App() {
 
       <div className="gap-10">
         <InputCheckbox />
+      </div>
+
+      <div className="gap-10">
+        <Card size="md">Olá mundo</Card>
       </div>
     </div>
   );
