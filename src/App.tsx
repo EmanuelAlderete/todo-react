@@ -44,6 +44,7 @@ export default function App() {
         <div className="flex gap-10">
           <ButtonIcon icon={TrashIcon} variant={"secondary"} />
           <ButtonIcon icon={TrashIcon} variant={"primary"} />
+          <ButtonIcon icon={TrashIcon} loading />
         </div>
 
         <div className="gap-10">
