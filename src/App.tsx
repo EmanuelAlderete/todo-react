@@ -9,6 +9,7 @@ import Container from "./components/container";
 import Icon from "./components/icon";
 import InputCheckbox from "./components/inputCheckbox";
 import InputText from "./components/inputText";
+import Skeleton from "./components/skeleton/skeleton";
 import Text from "./components/text/text";
 
 export default function App() {
@@ -54,6 +55,12 @@ export default function App() {
 
         <div className="gap-10">
           <Card size="md">Olá mundo</Card>
+        </div>
+
+        <div className="space-y-2">
+          <Skeleton className="h-6" />
+          <Skeleton className="h-6" />
+          <Skeleton className="w-96 h-6" />
         </div>
       </div>
     </Container>
