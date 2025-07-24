@@ -1,42 +1,44 @@
 # Todo React
 
-Aplicação de lista de tarefas (To-Do) desenvolvida em React, com gerenciamento de estado local e componentes reutilizáveis.
+This project was developed during the React training course by Rocketseat.
 
-## Funcionalidades
+A to-do list application built with React, featuring local state management and reusable components.
 
-- Adicionar, editar, concluir e remover tarefas
-- Persistência local das tarefas usando Local Storage
-- Feedback visual de carregamento e ações
-- Componentização avançada (Badge, Button, Card, Input, Skeleton, etc)
-- Página de demonstração dos componentes
+## Features
 
-## Estrutura do Projeto
+- Add, edit, complete, and remove tasks
+- Persist tasks using Local Storage
+- Visual feedback for loading and actions
+- Advanced componentization (Badge, Button, Card, Input, Skeleton, etc.)
+- Component showcase page
 
-- **Página Inicial (`/`)**: Lista de tarefas com resumo e ações.
-- **Página de Componentes (`/components`)**: Galeria de todos os componentes reutilizáveis do projeto.
+## Project Structure
 
-### Componentes Principais
+- **Home Page (`/`)**: Task list with summary and actions.
+- **Components Page (`/components`)**: Gallery of all reusable components in the project.
 
-- **TasksList**: Exibe a lista de tarefas e botão para adicionar nova tarefa.
-- **TaskItem**: Item individual da lista, com opções de editar, concluir e remover.
-- **TasksSummary**: Mostra o total de tarefas criadas e concluídas.
-- **Header/Footer**: Layout com navegação entre páginas.
-- **Componentes reutilizáveis**: Badge, Button, ButtonIcon, Card, Container, Icon, InputCheckbox, InputText, Skeleton, Text.
+### Main Components
 
-### Gerenciamento de Tarefas
+- **TasksList**: Displays the list of tasks and a button to add a new task.
+- **TaskItem**: Individual task item with options to edit, complete, and remove.
+- **TasksSummary**: Shows the total number of created and completed tasks.
+- **Header/Footer**: Layout with navigation between pages.
+- **Reusable components**: Badge, Button, ButtonIcon, Card, Container, Icon, InputCheckbox, InputText, Skeleton, Text.
 
-- As tarefas são armazenadas no Local Storage (`tasks`).
-- Cada tarefa possui: `id`, `title`, `concluded` (opcional), `state` (`creating` ou `created`).
-- Hooks personalizados (`useTasks`, `useTask`) para manipulação e atualização das tarefas.
+### Task Management
+
+- Tasks are stored in Local Storage (`tasks`).
+- Each task has: `id`, `title`, `concluded` (optional), `state` (`creating` or `created`).
+- Custom hooks (`useTasks`, `useTask`) for handling and updating tasks.
 
 ### Scripts
 
-- `npm run dev`: Inicia o servidor de desenvolvimento (Vite)
-- `npm run build`: Gera build de produção
-- `npm run preview`: Visualiza build de produção localmente
-- `npm run lint`: Executa o linter
+- `npm run dev`: Start the development server (Vite)
+- `npm run build`: Build for production
+- `npm run preview`: Preview the production build locally
+- `npm run lint`: Run the linter
 
-### Tecnologias Utilizadas
+### Technologies Used
 
 - React 19
 - TypeScript
@@ -45,14 +47,14 @@ Aplicação de lista de tarefas (To-Do) desenvolvida em React, com gerenciamento
 - class-variance-authority
 - use-local-storage
 
-## Como rodar o projeto
+## How to run the project
 
-1. Instale as dependências:
+1. Install dependencies:
    ```bash
    npm install
    ```
-2. Rode o projeto em modo desenvolvimento:
+2. Start the development server:
    ```bash
    npm run dev
    ```
-3. Acesse em [http://localhost:5173](http://localhost:5173)
+3. Access at [http://localhost:5173](http://localhost:5173)
