@@ -20,7 +20,7 @@ export default function TaskItem({ task }: TaskItemProps) {
   const [isEditing, setIsEditing] = React.useState(
     task?.state === TaskState.Creating
   );
-  const [taskTitle, setTaskTitle] = React.useState("");
+  const [taskTitle, setTaskTitle] = React.useState(task.title || "");
   const { updateTask } = useTask();
 
   function handleEditTask() {
@@ -68,6 +68,7 @@ export default function TaskItem({ task }: TaskItemProps) {
       ) : (
         <form onSubmit={handleSaveTask} className="flex items-center gap-4">
           <InputText
+            value={taskTitle}
             className="flex-1"
             onChange={handleChangeTextTitle}
             required
