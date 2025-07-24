@@ -24,6 +24,7 @@ export const buttonIconVariants = cva(
       variant: "primary",
       size: "sm",
       disabled: false,
+      handling: false,
     },
   }
 );

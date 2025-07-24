@@ -21,6 +21,7 @@ export const buttonVariants = cva(
       variant: "primary",
       size: "md",
       disabled: false,
+      handling: false,
     },
   }
 );
