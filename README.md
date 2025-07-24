@@ -1,69 +1,58 @@
-# React + TypeScript + Vite
+# Todo React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação de lista de tarefas (To-Do) desenvolvida em React, com gerenciamento de estado local e componentes reutilizáveis.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Adicionar, editar, concluir e remover tarefas
+- Persistência local das tarefas usando Local Storage
+- Feedback visual de carregamento e ações
+- Componentização avançada (Badge, Button, Card, Input, Skeleton, etc)
+- Página de demonstração dos componentes
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Página Inicial (`/`)**: Lista de tarefas com resumo e ações.
+- **Página de Componentes (`/components`)**: Galeria de todos os componentes reutilizáveis do projeto.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Componentes Principais
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **TasksList**: Exibe a lista de tarefas e botão para adicionar nova tarefa.
+- **TaskItem**: Item individual da lista, com opções de editar, concluir e remover.
+- **TasksSummary**: Mostra o total de tarefas criadas e concluídas.
+- **Header/Footer**: Layout com navegação entre páginas.
+- **Componentes reutilizáveis**: Badge, Button, ButtonIcon, Card, Container, Icon, InputCheckbox, InputText, Skeleton, Text.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Gerenciamento de Tarefas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- As tarefas são armazenadas no Local Storage (`tasks`).
+- Cada tarefa possui: `id`, `title`, `concluded` (opcional), `state` (`creating` ou `created`).
+- Hooks personalizados (`useTasks`, `useTask`) para manipulação e atualização das tarefas.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Scripts
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `npm run dev`: Inicia o servidor de desenvolvimento (Vite)
+- `npm run build`: Gera build de produção
+- `npm run preview`: Visualiza build de produção localmente
+- `npm run lint`: Executa o linter
+
+### Tecnologias Utilizadas
+
+- React 19
+- TypeScript
+- Vite
+- TailwindCSS
+- class-variance-authority
+- use-local-storage
+
+## Como rodar o projeto
+
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+2. Rode o projeto em modo desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+3. Acesse em [http://localhost:5173](http://localhost:5173)
