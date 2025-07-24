@@ -3,7 +3,7 @@ import Text from "../components/text";
 import useTasks from "../hooks/useTasks";
 
 export default function TasksSummary() {
-  const { tasksCount, concludedTasksCount } = useTasks();
+  const { createdTasksCount, concludedTasksCount } = useTasks();
 
   return (
     <>
@@ -11,14 +11,14 @@ export default function TasksSummary() {
         <Text variant="body-sm-bold" className="!text-gray-300">
           Tarefas criadas
         </Text>
-        <Badge variant="secondary">{tasksCount}</Badge>
+        <Badge variant="secondary">{createdTasksCount}</Badge>
       </div>
       <div className="flex items-center gap-2">
         <Text variant="body-sm-bold" className="!text-gray-300">
           Concluídas
         </Text>
         <Badge variant="primary">
-          {concludedTasksCount} de {tasksCount}
+          {concludedTasksCount} de {createdTasksCount}
         </Badge>
       </div>
     </>
